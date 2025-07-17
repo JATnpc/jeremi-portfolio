@@ -52,7 +52,7 @@ import {
           {techStack.map((tech, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2 bg-white/5 text-white px-4 py-2 rounded-lg text-sm font-medium backdrop-blur-sm border border-white/10 md:transition-all md:duration-300 md:hover:scale-110 md:hover:shadow-lg md:hover:bg-white/10"
+              className="flex items-center gap-2 bg-white/5 text-white px-4 py-2 rounded-lg text-sm font-medium border border-white/10 md:backdrop-blur-sm md:transition-all md:duration-300 md:hover:scale-110 md:hover:shadow-lg md:hover:bg-white/10"
             >
               <span className="text-lg">{tech.icon}</span>
               <span>{tech.name}</span>
