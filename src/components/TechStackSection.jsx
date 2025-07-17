@@ -2,7 +2,7 @@ import {
     SiJavascript, SiTypescript, SiPhp, SiPython, SiC, SiCplusplus, SiReact,
     SiVuedotjs, SiNextdotjs, SiIonic, SiNodedotjs, SiTailwindcss, SiMysql,
     SiMongodb, SiSupabase, SiClerk, SiGit, SiGithub, SiBitbucket, SiWordpress,
-    SiAdobephotoshop, SiAdobeillustrator, SiLaravel, SiHtml5, SiCss3
+    SiAdobephotoshop, SiAdobeillustrator, SiLaravel, SiHtml5, SiCss3, SiCsharp, SiPostman
   } from 'react-icons/si';
   import { FaElementor } from 'react-icons/fa';
   
@@ -32,11 +32,12 @@ import {
     { icon: <SiTypescript />, name: 'Typescript' },
     { icon: <SiC />, name: 'C' },
     { icon: <SiCplusplus />, name: 'C++' },
+    { icon: <SiCsharp />, name: 'C#' },
     { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
     { icon: <SiLaravel />, name: 'Laravel' },
     { icon: <SiNextdotjs />, name: 'Next.JS' },
     { icon: <SiMongodb />, name: 'MongoDB' },
-    { icon: <SiWordpress />, name: 'Wordpress' },
+    { icon: <SiPostman />, name: 'Postman' },
     { icon: <SiAdobephotoshop />, name: 'Photoshop' },
     { icon: <SiAdobeillustrator />, name: 'Illustrator' },
     { icon: <ArduinoIcon />, name: 'Arduino' },
