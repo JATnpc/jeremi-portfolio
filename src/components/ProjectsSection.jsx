@@ -53,7 +53,7 @@ export default function ProjectsSection() {
         {projects.map((project, idx) => (
           <div
             key={idx}
-            className="bg-black/80 border border-white/30 rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="bg-black/80 border border-white/30 rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:border-white/70"
           >
             <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-5 flex flex-col flex-1">
