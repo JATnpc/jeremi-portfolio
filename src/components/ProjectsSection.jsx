@@ -51,7 +51,10 @@ export default function ProjectsSection() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, idx) => (
-          <div key={idx} className="bg-black/80 border border-white/30 rounded-xl overflow-hidden flex flex-col">
+          <div
+            key={idx}
+            className="bg-black/80 border border-white/30 rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
             <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-5 flex flex-col flex-1">
               <h3 className="text-lg font-semibold text-white mb-2">{project.title}</h3>
