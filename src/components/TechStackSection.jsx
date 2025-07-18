@@ -45,14 +45,14 @@ import {
   export default function TechStackSection() {
     return (
       <section className="container max-w-3xl mx-auto px-4 md:px-0 pt-10">
-        <p className="text-xl font-light text-neutral-300 mb-6 tracking-widest text-left" style={{ fontFamily: 'InterVariable, sans-serif', color: '#D4D4D4' }}>
+        <p className="text-xl font-light text-neutral-300 mb-6 tracking-widest text-left" style={{ fontFamily: 'InterVariable, sans-serif' }}>
           Tech Stack
         </p>
         <div className="flex flex-wrap gap-3">
           {techStack.map((tech, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2 bg-white/5 text-white px-4 py-2 rounded-lg text-sm font-medium border border-white/10 md:backdrop-blur-sm md:transition-all md:duration-300 md:hover:scale-110 md:hover:shadow-lg md:hover:bg-white/10"
+              className="flex items-center gap-2 bg-[#0f172a] text-white px-4 py-2 rounded-lg text-sm font-medium border border-gray-700 shadow-sm md:backdrop-blur-sm md:transition-all md:duration-300 md:hover:scale-110 md:hover:shadow-lg md:hover:bg-[#1e293b] md:hover:-translate-y-1 md:transform md:transition-transform"
             >
               <span className="text-lg">{tech.icon}</span>
               <span>{tech.name}</span>

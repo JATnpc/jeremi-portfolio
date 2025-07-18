@@ -122,7 +122,7 @@ export default function ExperienceSection() {
       <li key={idx} className={`relative flex items-start${idx !== data.length - 1 ? ' mb-12' : ''}`}>
         {/* Timeline Circle with Logo - 48x48 pixels */}
         <span
-          className="relative self-start flex-shrink-0 -left-4 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center z-20 timeline-circle transition-all duration-300 hover:scale-110 hover:shadow-lg"
+          className="relative self-start flex-shrink-0 -left-4 w-12 h-12 bg-gray-700 rounded-full shadow-lg flex items-center justify-center z-20 timeline-circle transition-all duration-300 hover:scale-110 hover:shadow-xl"
           ref={idx === 0 ? firstCircleRef : idx === data.length - 1 ? lastCircleRef : null}
         >
           <img src={item.logo || 'https://placehold.co/48x48?text=' + (type === 'work' ? item.company?.charAt(0) : item.school?.charAt(0))} alt="logo" className="w-12 h-12 rounded-full object-cover border-2 border-white" />
@@ -147,7 +147,7 @@ export default function ExperienceSection() {
     <section className="container max-w-3xl mx-auto px-4 md:px-0 pt-10">
       <p
         className="text-xl font-light text-neutral-300 mb-6 tracking-widest text-left"
-        style={{ fontFamily: 'InterVariable, sans-serif', color: '#D4D4D4' }}
+        style={{ fontFamily: 'InterVariable, sans-serif' }}
       >
         Experience
       </p>
@@ -157,7 +157,7 @@ export default function ExperienceSection() {
         <button
           className={`flex-1 py-2 rounded-md font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm ${
             activeTab === 'work'
-              ? 'bg-white text-black shadow'
+              ? 'bg-white text-black shadow-md'
               : 'text-white bg-white/10 hover:bg-white/20'
           }`}
           onClick={() => setActiveTab('work')}
@@ -167,7 +167,7 @@ export default function ExperienceSection() {
         <button
           className={`flex-1 py-2 rounded-md font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm ${
             activeTab === 'studies'
-              ? 'bg-white text-black shadow'
+              ? 'bg-white text-black shadow-md'
               : 'text-white bg-white/10 hover:bg-white/20'
           }`}
           onClick={() => setActiveTab('studies')}
@@ -177,7 +177,7 @@ export default function ExperienceSection() {
       </div>
 
       {/* Single Container Box */}
-      <div className="bg-transparent border border-white rounded-lg overflow-hidden">
+      <div className="bg-transparent border border-white rounded-lg overflow-hidden shadow-sm">
         {/* Timeline Container - Fixed Height */}
         <div
           className="h-[520px] overflow-y-auto custom-scrollbar pl-12 pt-6 rounded-lg timeline-container"
@@ -205,11 +205,11 @@ export default function ExperienceSection() {
           width: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(255, 255, 255, 0.5);
+          background: rgba(100, 116, 139, 0.5);
           border-radius: 2px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(255, 255, 255, 0.5);
+          background: rgba(100, 116, 139, 0.7);
         }
         .custom-scrollbar::-webkit-scrollbar-track {
           background: transparent;
@@ -225,6 +225,7 @@ export default function ExperienceSection() {
           z-index: 5;
           height: 100%;
         }
+
       `}</style>
     </section>
   );

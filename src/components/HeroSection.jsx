@@ -9,7 +9,7 @@ export default function HeroSection() {
       <img
         src={profileImg}
         alt="Profile"
-        className="w-24 h-24 rounded-full border-2 border-white shadow-lg mb-4 object-cover transition-all duration-500 hover:scale-125 hover:rotate-3 hover:shadow-2xl hover:border-white"
+        className="w-24 h-24 rounded-full border-2 border-white shadow-xl mb-4 object-cover transition-all duration-500 hover:scale-125 hover:rotate-3 hover:shadow-2xl"
       />
       {/* Name */}
       <h1 className="text-white text-xl font-semibold mb-1">Jeremi Tamayo</h1>
@@ -20,23 +20,23 @@ export default function HeroSection() {
       {/* Contact Button */}
       <Link
         to="/contact"
-        className="flex items-center space-x-2 px-6 py-2 border border-white rounded-full text-white font-semibold hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg mb-4"
+        className="flex items-center space-x-2 px-6 py-3 border-2 border-white rounded-full text-white font-semibold hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg mb-4 shadow-md"
       >
         <FaPaperPlane />
         <span>Contact me</span>
       </Link>
       {/* Social Icons */}
       <div className="flex space-x-6 mt-2">
-        <a href="https://www.linkedin.com/in/jeremi-tamayo-663750199/" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center">
+        <a href="https://www.linkedin.com/in/jeremi-tamayo-663750199/" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border-2 border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center shadow-md">
           <FaLinkedin />
         </a>
-        <a href="https://www.instagram.com/jatph04/" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center">
+        <a href="https://www.instagram.com/jatph04/" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border-2 border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center shadow-md">
           <FaInstagram />
         </a>
-        <a href="https://github.com/JATnpc" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center">
+        <a href="https://github.com/JATnpc" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border-2 border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center shadow-md">
           <FaGithub />
         </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jeremitamayo04@gmail.com" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jeremitamayo04@gmail.com" target="_blank" rel="noopener noreferrer" className="text-white text-xl p-3 rounded-full border-2 border-white hover:bg-white hover:text-[#0f172a] transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center shadow-md">
           <FaEnvelope />
         </a>
       </div>

@@ -27,7 +27,7 @@ export default function HomePage() {
       {/* Minimal Floating Scroll-to-Top Button */}
       <button
         onClick={scrollToHero}
-        className="fixed bottom-6 right-6 z-50 bg-black/40 hover:bg-black/60 border border-white/20 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        className="fixed bottom-6 right-6 z-50 bg-[#0f172a] hover:bg-[#1e293b] border border-gray-700 text-white p-2 rounded-full transition-colors duration-200"
         style={{ boxShadow: 'none' }}
         aria-label="Scroll to top"
       >
