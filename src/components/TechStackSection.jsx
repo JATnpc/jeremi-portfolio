@@ -19,7 +19,7 @@ import {
   );
   
   const techStack = [
-    { icon: <SiJavascript />, name: 'Javascript' },
+    { icon: <SiJavascript />, name: 'Javascript' }, 
     { icon: <SiHtml5 />, name: 'HTML' },
     { icon: <SiCss3 />, name: 'CSS' },
     { icon: <SiPython />, name: 'Python' },
