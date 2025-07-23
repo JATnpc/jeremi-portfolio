@@ -27,12 +27,13 @@ export default function HomePage() {
       {/* Minimal Floating Scroll-to-Top Button */}
       <button
         onClick={scrollToHero}
-        className="fixed bottom-4 right-4 z-50 bg-[#0f172a] hover:bg-[#1e293b] border border-gray-700 text-white p-4 md:p-2 rounded-full transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-transparent hover:bg-[#1e293b]/40 border border-gray-700 text-white p-2 md:p-4 rounded-full transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+        style={{ bottom: 'env(safe-area-inset-bottom, 1rem)', right: 'env(safe-area-inset-right, 1rem)' }}
         aria-label="Scroll to top"
         tabIndex={0}
         onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { scrollToHero(); } }}
       >
-        <FaArrowUp size={20} />
+        <FaArrowUp size={16} className="md:size-5" />
       </button>
     </div>
   );
