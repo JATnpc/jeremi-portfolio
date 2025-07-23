@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import ContactPage from './components/ContactPage';
-import ComingSoonPage from './components/ComingSoonPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import ContactPage from "./components/ContactPage";
+import ComingSoonPage from "./components/ComingSoonPage";
 
 export default function App() {
   return (
