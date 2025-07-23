@@ -10,6 +10,7 @@ export default function HeroSection() {
         src={profileImg}
         alt="Profile"
         className="w-24 h-24 rounded-full border-2 border-white shadow-xl mb-4 object-cover transition-all duration-500 hover:scale-125 hover:rotate-3 hover:shadow-2xl"
+        loading="lazy"
       />
       {/* Name */}
       <h1 className="text-white text-xl font-semibold mb-1">Jeremi Tamayo</h1>

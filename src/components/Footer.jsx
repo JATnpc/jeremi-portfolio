@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="w-full flex flex-row justify-between items-center h-12px-8">
         {/* Logo only, no text */}
         <div className="flex items-center">
-          <img src={jeremiLogo} alt="jeremi Logo" className="w-[160px] h-[64px] object-contain transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer" />
+          <img src={jeremiLogo} alt="jeremi Logo" className="w-[160px] h-[64px] object-contain transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer" loading="lazy" />
         </div>
         {/* Social Icons */}
         <div className="flex flex-row items-center justify-between text-white text-[28px] gap-x-4">

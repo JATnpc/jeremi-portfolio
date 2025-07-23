@@ -55,7 +55,7 @@ export default function ProjectsSection() {
             key={idx}
             className="bg-black/80 border border-white/30 rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:border-white/70"
           >
-            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" loading="lazy" />
             <div className="p-5 flex flex-col flex-1">
               <h3 className="text-lg font-semibold text-white mb-2">{project.title}</h3>
               <p className="text-neutral-300 text-sm mb-3 flex-1">{project.description}</p>
