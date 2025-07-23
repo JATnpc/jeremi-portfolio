@@ -178,6 +178,8 @@ export default function ExperienceSection() {
       <p
         className="text-xl font-light text-neutral-300 mb-6 tracking-widest text-left"
         style={{ fontFamily: "InterVariable, sans-serif" }}
+        tabIndex={0}
+        aria-label="Experience section"
       >
         Experience
       </p>
@@ -191,6 +193,9 @@ export default function ExperienceSection() {
               : "text-white bg-white/10 hover:bg-white/20"
           }`}
           onClick={() => setActiveTab("work")}
+          aria-label="Show work experience"
+          tabIndex={0}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { setActiveTab('work'); } }}
         >
           Work
         </button>
@@ -201,6 +206,9 @@ export default function ExperienceSection() {
               : "text-white bg-white/10 hover:bg-white/20"
           }`}
           onClick={() => setActiveTab("studies")}
+          aria-label="Show education experience"
+          tabIndex={0}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { setActiveTab('studies'); } }}
         >
           Education
         </button>

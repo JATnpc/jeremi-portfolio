@@ -97,6 +97,8 @@ export default function TechStackSection() {
       <p
         className="text-lg sm:text-xl font-light text-neutral-300 mb-6 tracking-widest text-left"
         style={{ fontFamily: "InterVariable, sans-serif" }}
+        tabIndex={0}
+        aria-label="Tech Stack section"
       >
         Tech Stack
       </p>

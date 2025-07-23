@@ -181,6 +181,9 @@ export default function ContactPage() {
               type="submit"
               disabled={isSubmitting}
               className="flex items-center space-x-2 px-6 py-3 bg-[#0f172a] border border-gray-600 rounded-lg text-white font-semibold hover:bg-[#1e293b] hover:border-gray-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="Send message"
+              tabIndex={0}
+              onKeyDown={e => { if ((e.key === 'Enter' || e.key === ' ') && !isSubmitting) { e.preventDefault(); e.stopPropagation(); } }}
             >
               <FaPaperPlane />
               <span>{isSubmitting ? "Sending..." : "Send Message"}</span>

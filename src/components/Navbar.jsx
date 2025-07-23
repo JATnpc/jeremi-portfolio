@@ -6,11 +6,13 @@ export default function Navbar() {
     <>
       <nav className="fixed left-1/2 top-6 z-50 -translate-x-1/2 bg-black/70 backdrop-blur-md rounded-full shadow-lg px-4 md:px-8 py-2 flex items-center border border-white/20 w-[95vw] max-w-[420px]">
         {/* Hamburger for mobile */}
-        <button
-          className="md:hidden text-white focus:outline-none mr-2"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          onClick={() => setMenuOpen((open) => !open)}
-        >
+      <button
+        className="md:hidden text-white focus:outline-none mr-2"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        onClick={() => setMenuOpen((open) => !open)}
+        tabIndex={0}
+        onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { setMenuOpen(open => !open); } }}
+      >
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu">
             {menuOpen ? (
               <>
@@ -27,28 +29,36 @@ export default function Navbar() {
           </svg>
         </button>
         {/* Links */}
-        <div className={`flex-1 flex flex-col md:flex-row md:items-center md:space-x-8 ${menuOpen ? "flex" : "hidden"} md:flex`}>
+        <div className={`flex-1 flex flex-col md:flex-row md:items-center md:space-x-8 ${menuOpen ? "flex" : "hidden"} md:flex`} role="navigation" aria-label="Main navigation">
           <a
             href="#home"
             className="text-white text-base font-medium px-2 py-1 rounded-full hover:bg-white/10 transition"
+            tabIndex={0}
+            aria-label="Go to Home section"
           >
             Home
           </a>
           <a
             href="#about"
             className="text-white text-base font-medium px-2 py-1 rounded-full hover:bg-white/10 transition"
+            tabIndex={0}
+            aria-label="Go to About section"
           >
             About
           </a>
           <a
             href="#projects"
             className="text-white text-base font-medium px-2 py-1 rounded-full hover:bg-white/10 transition"
+            tabIndex={0}
+            aria-label="Go to Projects section"
           >
             Projects
           </a>
           <a
             href="#contact"
             className="text-white text-base font-medium px-2 py-1 rounded-full hover:bg-white/10 transition"
+            tabIndex={0}
+            aria-label="Go to Contact section"
           >
             Contact
           </a>

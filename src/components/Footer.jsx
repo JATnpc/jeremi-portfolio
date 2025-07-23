@@ -40,6 +40,8 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center hover:opacity-70 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            aria-label="Instagram profile"
+            tabIndex={0}
           >
             <FaInstagram />
           </a>
@@ -48,6 +50,8 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center hover:opacity-70 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            aria-label="GitHub profile"
+            tabIndex={0}
           >
             <FaGithub />
           </a>
@@ -56,6 +60,8 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center hover:opacity-70 transition-all duration-300 hover:scale-110 hover:shadow-lg md:mr-4"
+            aria-label="Send email"
+            tabIndex={0}
           >
             <FaEnvelope />
           </a>

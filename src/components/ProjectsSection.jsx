@@ -44,6 +44,8 @@ export default function ProjectsSection() {
         <h2
           className="text-xl font-light text-neutral-300 tracking-widest text-left"
           style={{ fontFamily: "InterVariable, sans-serif", color: "#D4D4D4" }}
+          tabIndex={0}
+          aria-label="Projects section"
         >
           Projects
         </h2>
@@ -51,6 +53,8 @@ export default function ProjectsSection() {
           to="/coming-soon"
           className="text-l font-light text-neutral-500 items-center transition-all duration-300 hover:text-white hover:scale-102"
           style={{ fontFamily: "InterVariable, sans-serif" }}
+          tabIndex={0}
+          aria-label="View more projects"
         >
           View More
         </Link>

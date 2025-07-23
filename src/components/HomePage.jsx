@@ -29,6 +29,8 @@ export default function HomePage() {
         onClick={scrollToHero}
         className="fixed bottom-4 right-4 z-50 bg-[#0f172a] hover:bg-[#1e293b] border border-gray-700 text-white p-4 md:p-2 rounded-full transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
         aria-label="Scroll to top"
+        tabIndex={0}
+        onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { scrollToHero(); } }}
       >
         <FaArrowUp size={20} />
       </button>

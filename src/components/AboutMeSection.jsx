@@ -6,6 +6,8 @@ export default function AboutMeSection() {
       <h2
         className="text-lg sm:text-xl font-light text-neutral-300 tracking-widest text-left mb-4"
         style={{ fontFamily: "InterVariable, sans-serif" }}
+        tabIndex={0}
+        aria-label="About Me section"
       >
         About Me
       </h2>
