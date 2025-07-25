@@ -78,7 +78,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen w-full bg-[#0f172a] flex flex-col items-center justify-center px-2 sm:px-4 py-4">
       <div className="w-full max-w-2xl">
-        {/* Back Button */}
+        {/* Back navigation button */}
         <div className="w-full mb-8">
           <Link
             to="/"
@@ -89,7 +89,7 @@ export default function ContactPage() {
           </Link>
         </div>
 
-        {/* Contact Form Container */}
+        {/* Contact form wrapper */}
         <div className="w-full bg-transparent border border-white rounded-lg p-4 sm:p-8">
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-white tracking-widest mb-4">
@@ -189,7 +189,7 @@ export default function ContactPage() {
               <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
             </button>
 
-            {/* Success/Error Messages */}
+            {/* Form submission status messages */}
             {submitStatus === "success" && (
               <div className="mt-4 p-4 bg-[#1e293b] border border-gray-700 rounded-lg text-white">
                 <p className="text-sm font-medium">

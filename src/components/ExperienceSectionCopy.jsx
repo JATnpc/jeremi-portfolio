@@ -15,6 +15,14 @@ const workExperience = [
       "Worked on API development, database integration, and backend features using Laravel.",
     logo: multisysLogo,
   },
+  {
+    date: "May 2025 – June 2025",
+    company: "Hytec Power Inc.",
+    role: "Technical Intern",
+    description:
+      "Assisted in preparing AutoCAD materials for the ASEAN WorldSkills 2025 competition, helped with technical documentation and product research, and supported software testing with the engineering team.",
+    logo: undefined, // Please update with the correct logo import if available
+  },
 ];
 
 const studies = [
@@ -50,7 +58,7 @@ const studies = [
   },
 ];
 
-export default function ExperienceSection() {
+export default function ExperienceSectionCopy() {
   const [activeTab, setActiveTab] = useState("work");
   const [lineHeight, setLineHeight] = useState(0);
   const [lineTop, setLineTop] = useState(0);
@@ -64,29 +72,26 @@ export default function ExperienceSection() {
       if (firstCircleRef.current && lastCircleRef.current) {
         const firstCircle = firstCircleRef.current;
         const lastCircle = lastCircleRef.current;
-        const containerRect = timelineContainerRef.current.getBoundingClientRect();
-        const scrollTop = timelineContainerRef.current.scrollTop;
+
         const firstRect = firstCircle.getBoundingClientRect();
         const lastRect = lastCircle.getBoundingClientRect();
-        const firstCenterY = firstRect.top + firstRect.height / 2 - containerRect.top + scrollTop;
-        const lastCenterY = lastRect.top + lastRect.height / 2 - containerRect.top + scrollTop;
-        const circleCenterX = firstRect.left + firstRect.width / 2 - containerRect.left;
-        // Always reset line height and position if only one item
-        if (firstCircle === lastCircle) {
-          setLineTop(firstCenterY);
-          setLineHeight(0);
-          setLineLeft(circleCenterX - 1);
-        } else {
-          const totalHeight = lastCenterY - firstCenterY;
-          setLineTop(firstCenterY);
-          setLineHeight(totalHeight);
-          setLineLeft(circleCenterX - 1);
-        }
-      } else {
-        // If no circles, reset line
-        setLineTop(0);
-        setLineHeight(0);
-        setLineLeft(0);
+        const containerRect =
+          timelineContainerRef.current.getBoundingClientRect();
+        const scrollTop = timelineContainerRef.current.scrollTop;
+
+        const firstCenterY =
+          firstRect.top + firstRect.height / 2 - containerRect.top + scrollTop;
+        const lastCenterY =
+          lastRect.top + lastRect.height / 2 - containerRect.top + scrollTop;
+
+        const totalHeight = lastCenterY - firstCenterY;
+
+        setLineTop(firstCenterY);
+        setLineHeight(totalHeight);
+
+        const circleCenterX =
+          firstRect.left + firstRect.width / 2 - containerRect.left;
+        setLineLeft(circleCenterX - 1);
       }
     };
 
@@ -94,12 +99,9 @@ export default function ExperienceSection() {
       timelineContainerRef.current.scrollTop = 0;
     }
 
-    // Calculate immediately
     updateLineDimensions();
 
-    // Update on window resize
     window.addEventListener("resize", updateLineDimensions);
-    // Update on scroll
     const scrollHandler = () => requestAnimationFrame(updateLineDimensions);
     if (timelineContainerRef.current) {
       timelineContainerRef.current.addEventListener("scroll", scrollHandler);
@@ -122,7 +124,6 @@ export default function ExperienceSection() {
         key={idx}
         className={`relative flex items-start${idx !== data.length - 1 ? " mb-12" : ""}`}
       >
-    {/* Timeline circle displaying company or school logo */}
         <span
           className="relative self-start flex-shrink-0 -left-4 w-12 h-12 bg-gray-700 rounded-full shadow-lg flex items-center justify-center z-20 timeline-circle transition-all duration-300 hover:scale-110 hover:shadow-xl"
           ref={
@@ -145,7 +146,6 @@ export default function ExperienceSection() {
             className="w-12 h-12 rounded-full object-cover border-2 border-white"
           />
         </span>
-    {/* Timeline entry details */}
         <div className="ml-0 pr-8 -mt-1">
           <time className="text-xs text-gray-400 mb-1">{item.date}</time>
           <h2 className="font-semibold leading-none text-white text-base mb-1">
@@ -169,12 +169,10 @@ export default function ExperienceSection() {
         className="text-xl font-light text-neutral-300 mb-6 tracking-widest text-left"
         style={{ fontFamily: "InterVariable, sans-serif" }}
         tabIndex={0}
-        aria-label="Experience section"
+        aria-label="Experience section copy"
       >
-        Experience
+        Experience (Copy)
       </p>
-
-    {/* Experience section tabs */}
       <div className="flex w-full mb-6 gap-0">
         <button
           className={`flex-1 py-2 rounded-md font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm ${
@@ -203,10 +201,7 @@ export default function ExperienceSection() {
           Education
         </button>
       </div>
-
-    {/* Main timeline container */}
       <div className="bg-transparent border border-white rounded-lg overflow-hidden shadow-sm">
-    {/* Scrollable timeline container */}
         <div
           className="h-[420px] sm:h-[520px] overflow-y-auto custom-scrollbar pl-8 sm:pl-12 pt-6 rounded-lg timeline-container"
           style={{
@@ -216,7 +211,6 @@ export default function ExperienceSection() {
           }}
           ref={timelineContainerRef}
         >
-    {/* Vertical line connecting timeline entries */}
           <div
             className={`timeline-vertical-line`}
             style={{
@@ -251,7 +245,6 @@ export default function ExperienceSection() {
         }
         .timeline-vertical-line {
           position: absolute;
-          /* left is now set dynamically */
           width: 2px;
           background: rgba(255, 255, 255, 0.8);
           z-index: 5;

@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="w-full py-6 sm:py-8 flex flex-col justify-end px-2 sm:px-4">
       <hr className="w-full border-t border-gray-300/20 my-4" />
       <div className="w-full flex flex-row justify-between items-center h-12px-8 relative flex-wrap md:flex-nowrap gap-y-4 md:gap-y-0">
-        {/* Logo only, no text */}
+        {/* Footer logo without text */}
         <div className="flex items-center">
           <img
             src={jeremiLogo}
@@ -23,7 +23,7 @@ export default function Footer() {
             loading="lazy"
             onClick={handleLogoClick}
           />
-        {/* Popup Message as bubble beside logo */}
+        {/* Popup message displayed beside logo on click */}
         {showPopup && (
           <div className="relative ml-2 md:ml-4">
             <div className="bg-transparent border-2 border-white rounded-xl px-3 py-1 md:px-5 md:py-2 text-white shadow-lg z-50 flex items-center animate-fade-in backdrop-blur-md max-w-[120px] md:max-w-none">
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         )}
         </div>
-        {/* Social Icons */}
+        {/* Social media profile icons */}
         <div className="flex flex-row items-center justify-between text-white text-[22px] md:text-[28px] gap-x-2 md:gap-x-4">
           <a
             href="https://www.linkedin.com/in/jeremi-tamayo-66375199/"

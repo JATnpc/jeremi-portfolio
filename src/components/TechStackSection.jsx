@@ -29,7 +29,7 @@ import {
 import postgresqlLogo from "../assets/postgresql.png";
 import { FaElementor } from "react-icons/fa";
 
-// Add Arduino SVG icon
+// Custom SVG icon for Arduino
 const ArduinoIcon = () => (
   <svg
     width="1em"
