@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import multisysLogo from "../assets/multisys.jpg";
-import hytecLogo from "../assets/hytec.png";
 import olpccLogo from "../assets/olpcc.png";
 import isuLogo from "../assets/isu.png";
 import stiLogo from "../assets/sti.png";
@@ -15,14 +14,6 @@ const workExperience = [
     description:
       "Worked on API development, database integration, and backend features using Laravel.",
     logo: multisysLogo,
-  },
-  {
-    date: "May 2025 – June 2025",
-    company: "Hytec Power Inc.",
-    role: "Technical Intern",
-    description:
-      "Assisted in preparing AutoCAD materials for the ASEAN WorldSkills 2025 competition, helped with technical documentation and product research, and supported software testing with the engineering team.",
-    logo: hytecLogo,
   },
 ];
 
@@ -73,30 +64,29 @@ export default function ExperienceSection() {
       if (firstCircleRef.current && lastCircleRef.current) {
         const firstCircle = firstCircleRef.current;
         const lastCircle = lastCircleRef.current;
-
+        const containerRect = timelineContainerRef.current.getBoundingClientRect();
+        const scrollTop = timelineContainerRef.current.scrollTop;
         const firstRect = firstCircle.getBoundingClientRect();
         const lastRect = lastCircle.getBoundingClientRect();
-        const containerRect =
-          timelineContainerRef.current.getBoundingClientRect();
-        const scrollTop = timelineContainerRef.current.scrollTop;
-
-        // Calculate positions relative to the container, accounting for scroll
-        const firstCenterY =
-          firstRect.top + firstRect.height / 2 - containerRect.top + scrollTop;
-        const lastCenterY =
-          lastRect.top + lastRect.height / 2 - containerRect.top + scrollTop;
-
-        // Calculate the exact height needed to connect the centers
-        const totalHeight = lastCenterY - firstCenterY;
-
-        // Set line to start exactly at the center of the first circle
-        setLineTop(firstCenterY);
-        setLineHeight(totalHeight);
-
-        // Dynamically set the horizontal center of the line to match the circle
-        const circleCenterX =
-          firstRect.left + firstRect.width / 2 - containerRect.left;
-        setLineLeft(circleCenterX - 1); // -1 to center the 2px line
+        const firstCenterY = firstRect.top + firstRect.height / 2 - containerRect.top + scrollTop;
+        const lastCenterY = lastRect.top + lastRect.height / 2 - containerRect.top + scrollTop;
+        const circleCenterX = firstRect.left + firstRect.width / 2 - containerRect.left;
+        // Always reset line height and position if only one item
+        if (firstCircle === lastCircle) {
+          setLineTop(firstCenterY);
+          setLineHeight(0);
+          setLineLeft(circleCenterX - 1);
+        } else {
+          const totalHeight = lastCenterY - firstCenterY;
+          setLineTop(firstCenterY);
+          setLineHeight(totalHeight);
+          setLineLeft(circleCenterX - 1);
+        }
+      } else {
+        // If no circles, reset line
+        setLineTop(0);
+        setLineHeight(0);
+        setLineLeft(0);
       }
     };
 
