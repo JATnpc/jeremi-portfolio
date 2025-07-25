@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed left-1/2 top-6 z-50 -translate-x-1/2 bg-black/70 backdrop-blur-md rounded-full shadow-lg px-4 md:px-8 py-2 flex items-center border border-white/20 w-[95vw] max-w-[420px]">
-        {/* Hamburger for mobile */}
+    {/* Mobile navigation menu button */}
       <button
         className="md:hidden text-white focus:outline-none mr-2"
         aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
@@ -28,7 +28,7 @@ export default function Navbar() {
             )}
           </svg>
         </button>
-        {/* Links */}
+    {/* Navigation links */}
         <div className={`flex-1 flex flex-col md:flex-row md:items-center md:space-x-8 ${menuOpen ? "flex" : "hidden"} md:flex`} role="navigation" aria-label="Main navigation">
           <a
             href="#home"

@@ -1,5 +1,7 @@
 import {
   SiJavascript,
+  SiInsomnia,
+  SiDocker,
   SiTypescript,
   SiPhp,
   SiPython,
@@ -19,16 +21,15 @@ import {
   SiGithub,
   SiBitbucket,
   SiWordpress,
-  SiAdobephotoshop,
-  SiAdobeillustrator,
   SiLaravel,
   SiHtml5,
   SiCss3,
   SiPostman,
 } from "react-icons/si";
+import postgresqlLogo from "../assets/postgresql.png";
 import { FaElementor } from "react-icons/fa";
 
-// Add Arduino SVG icon
+// Custom SVG icon for Arduino
 const ArduinoIcon = () => (
   <svg
     width="1em"
@@ -67,6 +68,7 @@ const ArduinoIcon = () => (
   </svg>
 );
 
+
 const techStack = [
   { icon: <SiJavascript />, name: "Javascript" },
   { icon: <SiHtml5 />, name: "HTML" },
@@ -85,9 +87,13 @@ const techStack = [
   { icon: <SiLaravel />, name: "Laravel" },
   { icon: <SiNextdotjs />, name: "Next.JS" },
   { icon: <SiMongodb />, name: "MongoDB" },
-  { icon: <SiAdobephotoshop />, name: "Photoshop" },
-  { icon: <SiAdobeillustrator />, name: "Illustrator" },
+  { icon: <SiDocker />, name: "Docker" },
+  {
+    icon: <img src={postgresqlLogo} alt="pgAdmin 4" style={{ width: "1em", height: "1em", objectFit: "contain", borderRadius: "4px" }} />,
+    name: "pgAdmin 4"
+  },
   { icon: <ArduinoIcon />, name: "Arduino" },
+  { icon: <SiInsomnia />, name: "Insomnia" },
   { icon: <SiPostman />, name: "Postman" },
 ];
 
