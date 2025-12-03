@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import multisysLogo from "../assets/multisys.jpg";
+import hytecLogo from "../assets/hytec.jpg";
 import olpccLogo from "../assets/olpcc.png";
 import isuLogo from "../assets/isu.png";
 import stiLogo from "../assets/sti.png";
@@ -21,7 +22,7 @@ const workExperience = [
     role: "Technical Intern",
     description:
       "Assisted in preparing AutoCAD materials for the ASEAN WorldSkills 2025 competition, helped with technical documentation and product research, and supported software testing with the engineering team.",
-    logo: undefined, // Please update with the correct logo import if available
+    logo: hytecLogo, // Please update with the correct logo import if available
   },
 ];
 
