@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import multisysLogo from "../assets/multisys.jpg";
-import hytecLogo from "../assets/hytec.jpg";
+import hytecLogo from "../assets/hytec.png";
 import olpccLogo from "../assets/olpcc.png";
 import isuLogo from "../assets/isu.png";
 import stiLogo from "../assets/sti.png";
