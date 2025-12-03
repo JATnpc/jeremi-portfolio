@@ -15,6 +15,14 @@ const workExperience = [
       "Worked on API development, database integration, and backend features using Laravel.",
     logo: multisysLogo,
   },
+  {
+    date: "May 2025 – June 2025",
+    company: "Hytec Power Inc.",
+    role: "Technical Intern",
+    description:
+      "Assisted in preparing AutoCAD materials for the ASEAN WorldSkills 2025 competition, helped with technical documentation and product research, and supported software testing with the engineering team.",
+    logo: undefined, // Please update with the correct logo import if available
+  },
 ];
 
 const studies = [
